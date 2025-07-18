@@ -1,16 +1,2 @@
-ファイル名: requirements.txt
-内容:
 Flask==2.3.3
 requests==2.31.0
-ファイル名: app.py
-内容:
-from flask import Flask
-
-app = Flask(__name__)
-
-@app.route('/')
-def home():
-    return "<h1>🏰 CIEL-CONTRACT - Noah Kingdom</h1><p>AI Contract Analysis System</p>"
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000)
