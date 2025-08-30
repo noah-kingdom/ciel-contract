@@ -1,13 +1,12 @@
+# 先頭付近
+from fastapi.staticfiles import StaticFiles
+from pathlib import Path
 import os
-from flask import Flask
 
-app = Flask(__name__)
+app = FastAPI()
+ROOT = Path(__file__).resolve().parent
+REPORTS_DIR = ROOT / "reports"
+REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
-@app.route('/')
-def home():
-    return "<h1>🏰 CIEL-CONTRACT - Noah Kingdom</h1><p>AI Contract Analysis System</p><p>Noah王国の技術基盤、完全復活！</p>"
-
-if __name__ == '__main__':
-    # Azure App Serviceでは環境変数PORTが設定される
-    port = int(os.environ.get('PORT', 8000))
-    app.run(host='0.0.0.0', port=port, debug=False)
+# /reports を静的公開（必須）
+app.mount("/reports", StaticFiles(directory=str(REPORTS_DIR)), name="reports")
