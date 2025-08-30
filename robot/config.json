@@ -1,0 +1,8 @@
+{
+  "input_dir": "C:\\Users\\hycpb\\Desktop\\OneDrive\\デスクトップ\\contracts",
+  "reports_dir": "C:\\ciel-contract\\reports",
+  "delete_original": true,
+  "initial_scan": true,
+  "poll_fallback_seconds": 10,
+  "slack_webhook": ""
+}

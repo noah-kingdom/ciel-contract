@@ -1,0 +1,13 @@
+﻿@
+# node / build
+node_modules/
+dist/
+.next/
+out/
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+# logs
+*.log
+@
